@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StopWatch</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div id="btns">
+            <button id="btn1" class="btn_st" onclick="stopwatch()">
+                StopWatch
+            </button>
+            <button id="btn2" class="btn_st" onclick="timmer()">Timmer</button>
+        </div>
+        <div id="stopwatch" class="main_content">
+            <div class="stopwatch">00:00:00</div>
+            <div class="buttons">
+                <button type="submit" id="start_btn_of_stopwatch" class="btn" onclick="start()">
+                    Start
+                </button>
+                <button id="stop_btn_of_stopwatch" class="btn" onclick="stop()">
+                    Stop
+                </button>
+                <button id="reset_btn_of_stopwatch" class="btn" onclick="reset()">
+                    Reset
+                </button>
+            </div>
+        </div>
+
+        <!-- TIMMER -->
+        <div id="timmer" class="main_content" style="display: none;">
+            <div id="form">
+                <input type="number" placeholder="Min" class="number" id="minute" min="0" required>
+                <a class="number">:</a>
+                <input type="number" placeholder="Sec" class="number" id="second" min="0" max="59" required>
+                <button type="submit" id="start_btn_of_timmer" class="btn buttons" onclick="start_timmer()">Start</button>
+            </div>
+
+            <div id="display" class="stopwatch" style="display: none;">00:00</div>
+
+            <div id="submittion" class="buttons">
+                <button id="stop_btn_of_timmer" class="btn" style="display: none;" onclick="killInterval()">Stop</button>
+                <button id="reset_btn_of_timmer" class="btn" onclick="reset_timmer()" style="display: none;">Reset</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
